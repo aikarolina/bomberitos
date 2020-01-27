@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Nosotros -Bomberos Quilpué</title>
+	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<script src="https://kit.fontawesome.com/a8027f23d1.js" crossorigin="anonymous"></script>
+
+	<script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+	<div class="contenedor">
+		<!-- header -->
+		<!-- estatico -->
+		<header class="header">
+			<div class="logo">
+				<img class="img-logo" src="{% static 'img/banner.jpeg' %}">
+			</div>
+			<nav class="menu">
+				<a href="{% url 'index' %}">Inicio</a>
+				<a href="{% url 'nosotros' %}">Nosotros</a>
+				<a href="{% url 'donaciones' %}">Donaciones</a>
+				<a href="{% url 'contacto' %}">Contacto</a>
+			</nav>
+		</header>
+
+		<!-- one seccion - galeria -->
+		
+		<div class="contenedor-galeria">
+			<!-- galeria  1 -->
+			<!-- estatico -->
+			<div class="seccion-galeria1">
+				<h2>Incendios - Bomberos Quilpué</h2>
+				<!-- dinamico -->
+				<ul class="galeria">
+					<li><a href="#img11"><img src="{% static 'img/galeria11.jpg' %}"></a></li>
+					<li><a href="#img12"><img src="{% static 'img/galeria12.jpg' %}"></a></li>
+					<li><a href="#img13"><img src="{% static 'img/galeria13.jpg' %}"></a></li>
+				</ul>
+
+				<div class="modal" id="img11">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img33">&#60;</a>
+						<a href="#img11"><img src="{% static 'img/galeria11.jpg' %}"></a>
+						<a href="#img12">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+				
+				<div class="modal" id="img12">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img11">&#60;</a>
+						<a href="#img12"><img src="{% static 'img/galeria12.jpg' %}"></a>
+						<a href="#img13">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+				
+				<div class="modal" id="img13">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img12">&#60;</a>
+						<a href="#img13"><img src="{% static 'img/galeria13.jpg' %}"></a>
+						<a href="#img21">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+			</div>
+			<!-- galeria  2 -->
+			<!-- estatico -->
+			<div class="seccion-galeria2">
+				<h2>Rescate - Bomberos Quilpué</h2>
+				<!-- dinamico -->
+				<ul class="galeria">
+					<li><a href="#img21"><img src="{% static 'img/galeria21.jpg' %}"></a></li>
+					<li><a href="#img22"><img src="{% static 'img/galeria22.jpg' %}"></a></li>
+					<li><a href="#img23"><img src="{% static 'img/galeria23.jpg' %}"></a></li>
+					
+				</ul>
+
+				<div class="modal" id="img21">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img13">&#60;</a>
+						<a href="#img21"><img src="{% static 'img/galeria21.jpg' %}"></a>
+						<a href="#img22">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+				
+				<div class="modal" id="img22">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img21">&#60;</a>
+						<a href="#img22"><img src="{% static 'img/galeria22.jpg' %}"></a>
+						<a href="#img23">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+				
+				<div class="modal" id="img23">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img22">&#60;</a>
+						<a href="#img23"><img src="{% static 'img/galeria23.jpg' %}"></a>
+						<a href="#img31">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+			</div>
+			<!-- galeria  3 -->
+			<!-- estatico -->
+			<div class="seccion-galeria3">
+				<h2>Entrenamientos - Bomberos Quilpué</h2>
+				<!-- dinamico -->
+				<ul class="galeria">
+					<li><a href="#img31"><img src="{% static 'img/galeria31.jpg' %}"></a></li>
+					<li><a href="#img32"><img src="{% static 'img/galeria32.jpg' %}"></a></li>
+					<li><a href="#img33"><img src="{% static 'img/galeria33.jpg' %}"></a></li>
+				</ul>
+
+				<div class="modal" id="img31">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img23">&#60;</a>
+						<a href="#img31"><img src="{% static 'img/galeria31.jpg' %}"></a>
+						<a href="#img32">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+				
+				<div class="modal" id="img32">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img31">&#60;</a>
+						<a href="#img32"><img src="{% static 'img/galeria32.jpg' %}"></a>
+						<a href="#img33">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+				
+				<div class="modal" id="img33">
+					<h3>Bomberos Quilpué</h3>
+					<div class="imagen">
+						<a href="#img32">&#60;</a>
+						<a href="#img33"><img src="{% static 'img/galeria33.jpg' %}"></a>
+						<a href="#img11">></a>
+					</div>
+					<a class="cerrar" href="">X</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- two seccion - destacado -->
+		<!-- estatico -->
+		<article class="articulo destacado">
+			<div class="contenedor-texto">
+				<div>
+					<h2 class="titulo">PRIMERA COMPAÑÍA «BOMBA ESTEBAN SANTIC»</h2>
+				</div>
+				<h4>
+					La Primera compañía de bomberos de Quilpué nace un 8 de marzo de 1925, un grupo de vecinos quilpueínos, se reunieron en los salones del club “La Unión”, con un solo objetivo el cual era fundar la Primera Compañía de Bomberos de Quilpué, entre sus filas  se contaba con prestigiosos hombres como Don Esteban Santic y Don Lorenzo Lubet entre otros, vecinos que se entregaron en cuerpo y alma, al desarrollo de esta compañía.
+				</h4>
+			</br>
+				<h4>
+					Como toda compañía esta necesito de nutrirse de materiales para desempeñarse con el éxito deseado, es así que su primera máquina fue un carro porta escala tirado por tracción humana y  su primera unidad motorizada fue un automóvil Fiat año 1929, donado por don Augusto Carozzi en el año 1930. Se pinto de color azul y se le instalo un tender con cuerpo de bomba Tamini, importado por la empresa Reicer Petivon de Valparaíso. Al trascurrido 1 año de su funcionamiento los primerinos ascendieron a 31 bomberos, prestando un servicio reconocido por toda la ciudad de Quilpué.
+				</h4>	
+			</div>
+			<div class="contenedor-imagen">
+				<img class="img-destacado" src="{% static 'img/historiaprincipal.png' %}" alt=""/>
+			</div>
+		</article>
+
+		
+		<!-- footer -->
+		<!-- estatico -->
+		<footer class="footer">
+			<ul class="icons">
+				<li><a href="https://twitter.com/bomberoscbq?lang=es" class="fab fa-twitter-square"></a></li>
+				<li><a href="https://www.facebook.com/CuerpoDeBomberosDeQuilpue/" class="fab fa-facebook-square"></a></li>
+				<li><a href="https://www.instagram.com/explore/locations/935076294/primera-compania-bomberos-quilpue/?hl=es-la" class="fab fa-instagram"></a></li>
+				<li><a href="https://www.youtube.com/user/bomberosCBQ" class="fab fa-youtube"></a></li>
+			</ul>
+			<ul class="copyright">
+				 <li>&copy; Aceituno&Martinez</li><li> Distribuido para: <a href="index.html">Primera Compañia de Bomberos Quilpué</a></li> 
+			</ul>
+		</footer>
+	</div>
+</body>
+</html>

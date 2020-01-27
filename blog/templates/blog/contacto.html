@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Inicio -Bomberos Quilpué</title>
+	<link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<script src="https://kit.fontawesome.com/a8027f23d1.js" crossorigin="anonymous"></script>
+
+	<script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+	<div class="contenedor">
+		<!-- header -->
+		<header class="header">
+			<div class="logo">
+				<img class="img-logo" src="{% static 'img/banner.jpeg' %}">
+			</div>
+			<nav class="menu">
+				<a href="{% url 'index' %}">Inicio</a>
+				<a href="{% url 'nosotros' %}">Nosotros</a>
+				<a href="{% url 'donaciones' %}">Donaciones</a>
+				<a href="{% url 'contacto' %}">Contacto</a>
+			</nav>
+		</header>
+
+		<!-- one seccion - contacto -->
+		<article class="contacto">
+			<div class="contenedor-form">
+				<div class="toggle">
+					<span> Crear Cuenta</span>
+				</div>
+				
+				<div class="formulario">
+					<h2>Iniciar Sesión</h2>
+					<form method="post" action="{% url 'login' %}">
+						{% csrf_token %}
+						<input type="text" placeholder="Usuario" required name="username" value="{{ form.username }}">
+						<input type="password" placeholder="Contraseña" required name="password" value="{{ form.password }}">
+						<input type="submit" value="Iniciar Sesión">
+					</form>
+				</div>
+				
+				<div class="formulario">
+					<h2>Crea tu Cuenta</h2>
+					<form action="#">
+						<input type="text" placeholder="Usuario" required>
+						
+						<input type="password" placeholder="Contraseña" required>
+						
+						<input type="email" placeholder="Correo Electronico" required>
+						
+						<input type="text" placeholder="Teléfono" required>
+						
+						<input type="submit" value="Registrarse">
+					</form>
+				</div>
+				<div class="reset-password">
+						<a href="{% url 'password_reset' %}">Perdio su contraseña?</a>
+				</div>
+			</div>
+		</article>
+	
+
+		<!-- footer -->
+		<footer class="footer">
+			<ul class="icons">
+				<li><a href="https://twitter.com/bomberoscbq?lang=es" class="fab fa-twitter-square"></a></li>
+				<li><a href="https://www.facebook.com/CuerpoDeBomberosDeQuilpue/" class="fab fa-facebook-square"></a></li>
+				<li><a href="https://www.instagram.com/explore/locations/935076294/primera-compania-bomberos-quilpue/?hl=es-la" class="fab fa-instagram"></a></li>
+				<li><a href="https://www.youtube.com/user/bomberosCBQ" class="fab fa-youtube"></a></li>
+			</ul>
+			<ul class="copyright">
+				 <li>&copy; Aceituno&Martinez</li><li> Distribuido para: <a href="index.html">Primera Compañia de Bomberos Quilpué</a></li> 
+			</ul>
+		</footer>
+	</div>
+	<script src="{% static 'js/formulario.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Inicio -Bomberos Quilpué</title>
+	<!-- <link rel="stylesheet" href="css/estilos.css">-->
+	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<script src="https://kit.fontawesome.com/a8027f23d1.js" crossorigin="anonymous"></script>
+	<script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	
+</head>
+<body>
+	<div class="contenedor">
+		<!-- header -->
+		<!-- estatico -->
+		<header class="header">
+			<div class="logo">
+				<img class="img-logo" src="{% static 'img/banner.jpeg' %}">
+			</div>
+			<nav class="menu">
+				<a href="{% url 'index' %}">Inicio</a>
+				<a href="{% url 'nosotros' %}">Nosotros</a>
+				<a href="{% url 'donaciones' %}">Donaciones</a>
+				<a href="{% url 'contacto' %}">Contacto</a>
+			</nav>
+		</header>
+		<!-- one seccion - carrusel -->
+		<!-- dinamico -->
+		<div class="slideshow">
+			<ul class="slider">
+				<li>
+					<img src="{% static 'img/1.jpg' %}" alt="">
+
+				</li>
+				<li>
+					<img src="{% static 'img/2.jpg' %}" alt="">
+
+				</li>
+				<li>
+					<img src="{% static 'img/3.jpg' %}" alt="">
+
+				</li>
+				<li>
+					<img src="{% static 'img/4.jpg' %}" alt="">
+
+				</li>
+			</ul>
+		
+			<div class="left">
+				<span class="fa fa-chevron-left"></span>
+			</div>
+
+			<div class="right">
+				<span class="fa fa-chevron-right"></span>
+			</div>
+
+		</div>
+
+
+		<!-- two seccion - destacado -->
+		<!-- estatico -->
+		<article class="articulo destacado">
+			<div class="contenedor-texto">
+				<div>
+					<h2 class="titulo">¡Dona hoy a tus Bomberos!</h2>
+				</div>
+				<p class="texto-informativo">
+					La primera compañia de Bomberos Quilpué, tiene el agrado de invitarlo a
+					participar conosotros en nuestras distintas actividades que realizamos,
+					y ser una gran pieza importante para nosotros, una de las formas de poder
+					ayudar es con la donacion hacia la institucion.
+				</p>
+				<a href="#" class="btn-link">¡REALIZA TU DONACION!</a>			
+			</div>
+			<div class="contenedor-imagen">
+				<img class="img-destacado" src="{% static 'img/articuloprincipal.png' %}" alt=""/>
+			</div>
+		</article>
+		<!-- three seccion - noticia -->
+		<!--  dinamico -->
+		<main class="contenido">
+			<!-- articulo 1 -->
+			<article id="contenido-1" class="articulo">
+				<div class="contenedor-imagen">
+					<img class="img-articulo" src="{% static 'img/articulo1.jpeg' %}" alt=""/>
+				</div>
+				<div class="contenedor-texto">
+					<div>
+						<h2 class="titulo">¿Quieres ser parte de Nosotros?</h2>
+					</div>
+					<p class="texto-informativo">
+						¿Te gustaria ser parte de nuestra intitucion? o ¿Eres un amante
+						de las aventuras bomberiles? Ven y se parte de nosotros. Acá te 
+						ayudaremos con tu postulacion y te podremos guiar en este proceso.
+					</p>
+					<a href="{% url 'contacto' %}" class="btn-link">¡Quiero unirme!</a>
+				</div>
+			</article>
+			<!-- articulo 2 -->
+			<article id="contenido-2" class="articulo">
+				<div class="contenedor-imagen">
+					<img src="{% static 'img/articulo2.jpeg' %}" alt=""/>
+				</div>
+				<div class="contenedor-texto">
+					<div>
+						<h2 class="titulo">¿Eres un radio aficionado?</h2>
+					</div>
+					<p class="texto-informativo">
+						¿Te gusta seguir la radio frecuencia o los twitters de los bomberos? 
+						Aca nosotros te podemos ayudar, con una pequeña guia de las claves bomberiles.
+
+					</p>
+					<a href="http://despachos.aljoguco.cl/cbv/claves" class="btn-link">¡Guia de radio frecuencia!</a>
+				</div>
+			</article>
+			<!-- articulo 3 -->
+			<article id="contenido-3" class="articulo">
+				<div class="contenedor-imagen">
+					<img src="{% static 'img/articulo3.jpeg' %}" alt=""/>
+				</div>
+				<div class="contenedor-texto">
+					<div>
+						<h2 class="titulo">Vehículos Cuerpo Bomberos Quilpué</h2>
+					</div>
+					<br>
+
+					<p class="texto-informativo">
+						¿Te gustarian los vehículos bomberiles? Este es tu momento,
+						aca tenemos nuestras joyas bomberiles que nos acompañan a todos 
+						los lugares y fieles compañeros. 
+					</p>
+					<a href="#" class="btn-link">¡Quiero conocerlos!</a>
+				</div>
+			</article>
+			<!-- articulo 4 -->
+			<article id="contenido-4" class="articulo">
+				<div class="contenedor-imagen">
+					<img src="{% static 'img/articulo4.jpeg' %}" alt=""/>
+				</div>
+				<div class="contenedor-texto">
+					<div>
+						<h2 class="titulo">Alguna otro aviso importante</h2>
+					</div>
+					<p class="texto-informativo">
+						Estos avisos son importantes pero con una pequeña
+						descripcion si quieres saber mas apreta el boton de 
+						abajo uwu.
+					</p>
+					<a href="#" class="btn-link">¡Quiero conocerlos!</a>
+				</div>
+			</article>
+		</main>
+		<!-- four seccion - social -->
+		<!-- estatico -->
+		<aside class="contenedor-social">
+
+			<div class="twitters">
+				<div class="descripcion-social">
+					<h2 class="titulo">Bomberos Quilpué</h2>
+					<p>
+					</br>
+						Sigue a nuestro bomberos para siempre estar 
+						actualizado con las emergencias de la zona.
+					</p>
+				</br>
+					<a class="twitter-timeline" data-height="400" data-theme="dark" href="https://twitter.com/bomberosCBQ?ref_src=twsrc%5Etfw">Tweets by bomberosCBQ</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+				</div>
+			</div>
+			<div class="twitters">
+				<div class="descripcion-social">
+					<h2 class="titulo">Bomberos Valparaiso</h2>
+					<p>
+					</br>
+						Sigue a nuestro bomberos hermanos para siempre estar 
+						actualizado con las emergencias de la zona.
+					</p>
+				</br>
+					<a class="twitter-timeline" data-height="400" href="https://twitter.com/CentralCBV?ref_src=twsrc%5Etfw">Tweets by CentralCBV</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			</div>
+		</aside>
+
+		<!-- footer -->
+		<!-- estatico -->
+		<footer class="footer">
+			<ul class="icons">
+				<li><a href="https://twitter.com/bomberoscbq?lang=es" class="fab fa-twitter-square"></a></li>
+				<li><a href="https://www.facebook.com/CuerpoDeBomberosDeQuilpue/" class="fab fa-facebook-square"></a></li>
+				<li><a href="https://www.instagram.com/explore/locations/935076294/primera-compania-bomberos-quilpue/?hl=es-la" class="fab fa-instagram"></a></li>
+				<li><a href="https://www.youtube.com/user/bomberosCBQ" class="fab fa-youtube"></a></li>
+			</ul>
+			<ul class="copyright">
+				 <li>&copy; Aceituno&Martinez</li><li> Distribuido para: <a href="index.html">Primera Compañia de Bomberos Quilpué</a></li> 
+			</ul>
+		</footer>
+	</div>
+</body>
+</html>
